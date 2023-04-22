@@ -1,4 +1,4 @@
-To compile the files needed for problem 6 you need the following files:
+To compile the files needed for the reference BLAS you need the following files:
 
 refBLAS.hpp
 level1.cpp
@@ -18,6 +18,6 @@ Step 2. Consolidate in shared library called librefBLAS.so using the following c
 g++ -shared -o librefBLAS.so level1.o level2.o level3.o
 
 Step 3. Link the "main" file (in this case problem6.cpp) to the library using:
-g++ -o xproblem6 problem6.cpp -L. librefBLAS.so
+g++ -o xrefmain refmain.cpp -L. librefBLAS.so
 
 Step 4. Run using ./xproblem6. For speed, I used the experiments from the previous problem to test the library but with n<=10 for levels 2 and 3 to save time. 
